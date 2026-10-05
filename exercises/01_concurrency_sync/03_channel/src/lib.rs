@@ -18,7 +18,25 @@ pub fn simple_send_recv(items: Vec<String>) -> Vec<String> {
     // TODO: Spawn thread to send each element in items
     // TODO: In main thread, receive all messages and collect into Vec
     // Hint: When all Senders are dropped, recv() returns Err
-    todo!()
+    let n_items = items.len();
+
+    let (sender, receiver) = mpsc::channel();
+
+    let sender_handler = thread::spawn(move || {
+        items
+            .into_iter()
+            .for_each(|item| sender.send(item).unwrap())
+    });
+
+    let mut res = Vec::with_capacity(n_items);
+
+    for item in receiver {
+        res.push(item);
+    }
+
+    sender_handler.join().unwrap();
+
+    res
 }
 
 /// Create `n_producers` producer threads, each sending a message in format `"msg from {id}"`.
@@ -30,7 +48,28 @@ pub fn multi_producer(n_producers: usize) -> Vec<String> {
     // TODO: Clone a sender for each producer
     // TODO: Remember to drop the original sender, otherwise receiver won't finish
     // TODO: Collect all messages and sort
-    todo!()
+    let (sender, receiver) = mpsc::channel();
+
+    let mut handlers = Vec::with_capacity(n_producers);
+
+    for i in 0..n_producers {
+        let sender_clone = sender.clone();
+        let handle = thread::spawn(move || sender_clone.send(format!("msg from {}", i)).unwrap());
+
+        handlers.push(handle);
+    }
+
+    drop(sender);
+
+    let mut res = Vec::with_capacity(n_producers);
+
+    for msg in receiver {
+        res.push(msg);
+    }
+
+    res.sort();
+
+    res
 }
 
 #[cfg(test)]
