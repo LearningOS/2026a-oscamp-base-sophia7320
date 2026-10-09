@@ -45,12 +45,8 @@ impl<T> SpinLock<T> {
             core::hint::spin_loop();
         }
 
-        let ret;
-        unsafe {
-            ret = &mut *self.data.get();
-        }
+        unsafe {self.data.get().as_mut_unchecked()}
 
-        ret
     }
 
     /// Release lock.
