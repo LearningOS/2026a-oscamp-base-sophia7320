@@ -2,8 +2,8 @@
   "schema": 1,
   "courseId": 2074,
   "repository": "LearningOS/2026a-oscamp-base-sophia7320",
-  "commit": "fb5f3905c546a7782d6ea1d89d14209b2892d86d",
-  "score": 47,
+  "commit": "816ce80e50a985c05c57306bab7834f0c437dc98",
+  "score": 51,
   "totalScore": 100,
   "exercises": [
     {
@@ -86,9 +86,9 @@
     {
       "name": "spinlock",
       "max": 4,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 4,
+      "status": "pass",
+      "exitCode": 0
     },
     {
       "name": "spinlock_guard",
@@ -176,9 +176,9 @@
     }
   ],
   "student": "sophia7320",
-  "runId": "37899918987",
+  "runId": "37903819022",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }
