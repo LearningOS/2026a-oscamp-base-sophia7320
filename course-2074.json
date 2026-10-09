@@ -2,8 +2,8 @@
   "schema": 1,
   "courseId": 2074,
   "repository": "LearningOS/2026a-oscamp-base-sophia7320",
-  "commit": "2ca9a45ba8edffeb08a22338a194199948a69918",
-  "score": 43,
+  "commit": "fb5f3905c546a7782d6ea1d89d14209b2892d86d",
+  "score": 47,
   "totalScore": 100,
   "exercises": [
     {
@@ -79,9 +79,9 @@
     {
       "name": "atomic_ordering",
       "max": 4,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 4,
+      "status": "pass",
+      "exitCode": 0
     },
     {
       "name": "spinlock",
@@ -176,9 +176,9 @@
     }
   ],
   "student": "sophia7320",
-  "runId": "37894502745",
+  "runId": "37899918987",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }
