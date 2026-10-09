@@ -2,8 +2,8 @@
   "schema": 1,
   "courseId": 2074,
   "repository": "LearningOS/2026a-oscamp-base-sophia7320",
-  "commit": "35167fb69d32c9690cb7c914aae5479ceefd653c",
-  "score": 34,
+  "commit": "2b9dcbb5e4ef27a87963cde1011d56bb3aee7650",
+  "score": 39,
   "totalScore": 100,
   "exercises": [
     {
@@ -65,9 +65,9 @@
     {
       "name": "fd_table",
       "max": 5,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 5,
+      "status": "pass",
+      "exitCode": 0
     },
     {
       "name": "atomic_counter",
@@ -176,9 +176,9 @@
     }
   ],
   "student": "sophia7320",
-  "runId": "37887524938",
+  "runId": "37893422324",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }
