@@ -54,7 +54,7 @@ impl FlagChannel {
         // TODO: Read data (choose appropriate Ordering)
         
         while !self.ready.load(Ordering::Acquire){
-            std::hint::spin_loop();
+            core::hint::spin_loop();
         }
 
         self.data.load(Ordering::Relaxed)
