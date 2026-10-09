@@ -51,13 +51,16 @@ pub struct FdTable {
     // TODO: Design the internal structure
     // Hint: use Vec<Option<Arc<dyn File>>>
     //       the index is the fd number, None means the fd is closed or unallocated
+
+    count : usize,
+    files : Vec<Option<Arc<dyn File>>>,
 }
 
 impl FdTable {
     /// Create an empty fd table
     pub fn new() -> Self {
         // TODO
-        todo!()
+        Self { count: 0, files: vec![] }
     }
 
     /// Allocate a new fd, return the fd number.
@@ -65,25 +68,51 @@ impl FdTable {
     /// Prefers reusing the smallest closed fd number; if no free slot, appends to the end.
     pub fn alloc(&mut self, file: Arc<dyn File>) -> usize {
         // TODO
-        todo!()
+        
+        let mut fd = 0usize;
+
+        while let Some(_) = self.files.get(fd).unwrap_or(&None) {
+            fd += 1;
+        }
+
+        if fd < self.count{
+            self.files[fd] = Some(file);
+        }else{
+            self.files.push(Some(file));
+        }
+
+        self.count += 1;
+
+        fd
     }
 
     /// Get the file object for an fd. Returns None if the fd doesn't exist or is closed.
     pub fn get(&self, fd: usize) -> Option<Arc<dyn File>> {
         // TODO
-        todo!()
+        
+        if fd < self.count{
+            self.files[fd].clone()
+        }else {
+            None
+        }
     }
 
     /// Close an fd. Returns true on success, false if the fd doesn't exist or is already closed.
     pub fn close(&mut self, fd: usize) -> bool {
         // TODO
-        todo!()
+        if fd < self.files.len(){
+            self.files[fd] = None;
+            self.count -=1;
+            true
+        }else {
+            false
+        }
     }
 
     /// Return the number of currently allocated fds (excluding closed ones)
     pub fn count(&self) -> usize {
         // TODO
-        todo!()
+        self.count
     }
 }
 
