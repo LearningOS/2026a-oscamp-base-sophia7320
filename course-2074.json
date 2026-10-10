@@ -2,7 +2,7 @@
   "schema": 1,
   "courseId": 2074,
   "repository": "LearningOS/2026a-oscamp-base-sophia7320",
-  "commit": "5f322bf9fcfc83a36a1e1d9276c58942db0e18fa",
+  "commit": "ff4985ac5777f7539538728aa4cd0e060af0d6f0",
   "score": 66,
   "totalScore": 100,
   "exercises": [
@@ -115,8 +115,8 @@
       "name": "green_threads",
       "max": 6,
       "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "status": "timeout",
+      "exitCode": 124
     },
     {
       "name": "basic_future",
@@ -176,9 +176,9 @@
     }
   ],
   "student": "sophia7320",
-  "runId": "38070854605",
+  "runId": "38079645122",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }
