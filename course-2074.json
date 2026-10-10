@@ -2,8 +2,8 @@
   "schema": 1,
   "courseId": 2074,
   "repository": "LearningOS/2026a-oscamp-base-sophia7320",
-  "commit": "c4424fd615d759a07c9b2e7073448128398acd41",
-  "score": 55,
+  "commit": "b2ee65418947e50ee403a3f4cbf096ef6f395d3f",
+  "score": 60,
   "totalScore": 100,
   "exercises": [
     {
@@ -100,9 +100,9 @@
     {
       "name": "rwlock",
       "max": 5,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 5,
+      "status": "pass",
+      "exitCode": 0
     },
     {
       "name": "stack_coroutine",
@@ -176,9 +176,9 @@
     }
   ],
   "student": "sophia7320",
-  "runId": "37916398289",
+  "runId": "38039305858",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }
