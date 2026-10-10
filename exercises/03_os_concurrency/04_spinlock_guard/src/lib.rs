@@ -57,9 +57,7 @@ impl<T> Deref for SpinGuard<'_, T> {
     type Target = T;
 
     fn deref(&self) -> &T {
-        unsafe {
-            self.lock.data.get().as_ref_unchecked()
-        }
+        unsafe {self.lock.data.get().as_ref_unchecked()}
     }
 }
 
