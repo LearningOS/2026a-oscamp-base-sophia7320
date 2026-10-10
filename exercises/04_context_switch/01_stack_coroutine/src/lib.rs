@@ -13,7 +13,7 @@
 //! - Callee-saved: `sp`, `ra`, `s0`–`s11`. The `ret` instruction is `jalr zero, 0(ra)`.
 //! - First and second arguments: `a0` (old context), `a1` (new context).
 
-// #![cfg(target_arch = "riscv64")]
+#![cfg(target_arch = "riscv64")]
 
 use core::arch::naked_asm;
 use std::vec;
@@ -94,7 +94,7 @@ const STACK_SIZE: usize = 1024 * 64;
 /// (stack grows down). The buffer must be kept alive for the lifetime of the context using this stack.
 pub fn alloc_stack() -> (Vec<u8>, usize) {
     // todo!("allocate stack buffer, return (buffer, stack_top) with stack_top 16-byte aligned")
-    let stack = vec![0x00u8;STACK_SIZE+0xff];
+    let stack = vec![0x00u8;STACK_SIZE];
     let top = stack.as_ptr() as usize + STACK_SIZE;
     (stack , top)
 }

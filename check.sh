@@ -127,7 +127,7 @@ for entry in "${exercises[@]}"; do
     else
         if cargo test -p "$package" --quiet 2>/dev/null; then
             echo -e "${GREEN}PASS${NC}"
-            ((PASS++))
+            ((PASS+=1))
         else
             echo -e "${RED}FAIL${NC}"
             ((FAIL++))
