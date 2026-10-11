@@ -2,8 +2,8 @@
   "schema": 1,
   "courseId": 2074,
   "repository": "LearningOS/2026a-oscamp-base-sophia7320",
-  "commit": "2621c38a8a9966945b4de174e3c5649d3b38201c",
-  "score": 89,
+  "commit": "610bfda34b37ff03fa49e03836323e75d894a0d6",
+  "score": 93,
   "totalScore": 100,
   "exercises": [
     {
@@ -156,9 +156,9 @@
     {
       "name": "page_table_walk",
       "max": 4,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 4,
+      "status": "pass",
+      "exitCode": 0
     },
     {
       "name": "multi_level_pt",
@@ -176,9 +176,9 @@
     }
   ],
   "student": "sophia7320",
-  "runId": "38148250648",
+  "runId": "38150242106",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }
