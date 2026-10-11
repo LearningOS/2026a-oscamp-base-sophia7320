@@ -14,7 +14,7 @@
 //! The scheduler round-robins among ready threads. User entry is wrapped by `thread_wrapper`, which
 //! calls the entry then marks the thread `Finished` and switches back.
 
-// #![cfg(target_arch = "riscv64")]
+#![cfg(target_arch = "riscv64")]
 
 use core::arch::naked_asm;
 
