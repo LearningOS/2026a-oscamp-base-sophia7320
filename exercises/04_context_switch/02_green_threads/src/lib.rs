@@ -139,7 +139,7 @@ impl Scheduler {
     pub fn spawn(&mut self, entry: extern "C" fn()) {
         // todo!("alloc stack, init ctx with ra=thread_wrapper and aligned sp, push GreenThread(Ready, entry)")
         let _stack = vec![0x00u8;STACK_SIZE];
-        let stack_top = (_stack.as_ptr() as usize + STACK_SIZE -16) & !0xff;
+        let stack_top = (_stack.as_ptr() as usize + STACK_SIZE -16) & !0xf;
 
         let mut ctx = TaskContext::default();
         ctx.ra = thread_wrapper as u64;
@@ -206,6 +206,7 @@ impl Scheduler {
                         switch_context(old, new);
                     }
                 }
+                break;
             }
         }
     }
