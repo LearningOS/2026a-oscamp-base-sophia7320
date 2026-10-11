@@ -39,7 +39,7 @@ pub async fn parallel_sleep_tasks(n: usize, duration_ms: u64) -> Vec<usize> {
     // TODO: Collect all results and sort
     
     let handles = (0..n).map(|task_id| tokio::spawn(async move {
-        sleep(Duration::from_millis(duration_ms));
+        let _ = sleep(Duration::from_millis(duration_ms));
         task_id
     }));
 
