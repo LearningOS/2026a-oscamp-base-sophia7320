@@ -2,7 +2,7 @@
   "schema": 1,
   "courseId": 2074,
   "repository": "LearningOS/2026a-oscamp-base-sophia7320",
-  "commit": "57ba3dfc6453a6214b97ff96a8a24a861db35bc7",
+  "commit": "329a97bb53e82a8bf54c2c87506baf2a2528b5dd",
   "score": 79,
   "totalScore": 100,
   "exercises": [
@@ -176,9 +176,9 @@
     }
   ],
   "student": "sophia7320",
-  "runId": "38131757323",
+  "runId": "38143848991",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }
