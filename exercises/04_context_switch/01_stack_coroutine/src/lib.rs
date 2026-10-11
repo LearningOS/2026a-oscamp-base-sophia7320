@@ -95,7 +95,7 @@ const STACK_SIZE: usize = 1024 * 64;
 pub fn alloc_stack() -> (Vec<u8>, usize) {
     // todo!("allocate stack buffer, return (buffer, stack_top) with stack_top 16-byte aligned")
     let stack = vec![0x00u8;STACK_SIZE];
-    let top = stack.as_ptr() as usize + STACK_SIZE;
+    let top = (stack.as_ptr() as usize + STACK_SIZE ) & !0xf ;
     (stack , top)
 }
 

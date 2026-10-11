@@ -188,7 +188,7 @@ impl Scheduler {
             if let ThreadState::Ready = self.threads[next].state {
                 self.threads[next].state = ThreadState::Running;
                 unsafe {
-                    CURRENT_THREAD_ENTRY = self.threads[next].entry;
+                    CURRENT_THREAD_ENTRY = self.threads[next].entry.take();
                     
                     if next > self.current{
                         let (first , second) = self.threads.split_at_mut(next);
