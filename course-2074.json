@@ -2,8 +2,8 @@
   "schema": 1,
   "courseId": 2074,
   "repository": "LearningOS/2026a-oscamp-base-sophia7320",
-  "commit": "329a97bb53e82a8bf54c2c87506baf2a2528b5dd",
-  "score": 79,
+  "commit": "dffa7d485b2d79744b7506ac65d5bae03106dafe",
+  "score": 82,
   "totalScore": 100,
   "exercises": [
     {
@@ -135,9 +135,9 @@
     {
       "name": "async_channel_ex",
       "max": 3,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 3,
+      "status": "pass",
+      "exitCode": 0
     },
     {
       "name": "select_timeout",
@@ -176,9 +176,9 @@
     }
   ],
   "student": "sophia7320",
-  "runId": "38143848991",
+  "runId": "38145972151",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }
