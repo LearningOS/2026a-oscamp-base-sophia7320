@@ -2,8 +2,8 @@
   "schema": 1,
   "courseId": 2074,
   "repository": "LearningOS/2026a-oscamp-base-sophia7320",
-  "commit": "f0dbc852e99c9999df27b460dbc2eacd44a80244",
-  "score": 86,
+  "commit": "2621c38a8a9966945b4de174e3c5649d3b38201c",
+  "score": 89,
   "totalScore": 100,
   "exercises": [
     {
@@ -149,9 +149,9 @@
     {
       "name": "pte_flags",
       "max": 3,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 3,
+      "status": "pass",
+      "exitCode": 0
     },
     {
       "name": "page_table_walk",
@@ -176,9 +176,9 @@
     }
   ],
   "student": "sophia7320",
-  "runId": "38146719961",
+  "runId": "38148250648",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }
