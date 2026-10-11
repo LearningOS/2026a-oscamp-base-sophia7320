@@ -2,8 +2,8 @@
   "schema": 1,
   "courseId": 2074,
   "repository": "LearningOS/2026a-oscamp-base-sophia7320",
-  "commit": "3494f405051f52e3d6126563780d03b6f4cf2f07",
-  "score": 97,
+  "commit": "0d683057e3fa20d667ef6cca5789061a7e1fa2e3",
+  "score": 100,
   "totalScore": 100,
   "exercises": [
     {
@@ -170,15 +170,15 @@
     {
       "name": "tlb_sim",
       "max": 3,
-      "score": 0,
-      "status": "fail",
-      "exitCode": 101
+      "score": 3,
+      "status": "pass",
+      "exitCode": 0
     }
   ],
   "student": "sophia7320",
-  "runId": "38160880096",
+  "runId": "38164379254",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }
